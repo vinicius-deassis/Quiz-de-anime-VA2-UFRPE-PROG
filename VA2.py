@@ -1,6 +1,6 @@
 import random
 import json
-#teste pro git
+#ola git hub
 
 file = open('question.json', 'r')
 questions = json.load(file)
