@@ -2,17 +2,18 @@ import random
 import json
 #ola git hub
 
-file = open('question.json', 'r')
-questions = json.load(file)
+file = open('question.json', 'r') #abre o arquivo que contem as perguntas
+questions = json.load(file) #determina a variavel que sera usada para buscar as perguntas
 file.close()
 
-file = open('feedback.json', 'r')
-feedback = json.load(file)
+file = open('feedback.json', 'r') #abre o arquivo que contem o gabarito
+feedback = json.load(file) #determina a variavel que sera usada para buscar as respostas corretas
 file.close()
 
-score = {}
+score = {} #utilizado para armazenar a pontuacao dos jogadores
 
 while True:
+# -----estrutura que gera 5 numeros aleatorios distintos------
     x = random.randint(1, 10)
     y = random.randint(1, 10)
     z = random.randint(1, 10)
@@ -115,7 +116,6 @@ while True:
 
 
     elif escolha == 'c':
-        print('============================')
         print('Ok, até a próxima!')
         print('============================')
         break
