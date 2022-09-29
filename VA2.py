@@ -105,13 +105,13 @@ while True:
 
         print(f'Parabéns {name}, sua pontuação foi {points}, obrigado por jogar!')
 
-        file = open('record.json', 'r')
-        json_loaded = json.load(file)
+        file = open('record.json', 'r') # abre o arquivo de recordes para ver os que ja existem
+        json_loaded = json.load(file) # carrega os dados num dicionario
         file.close()
-        json_loaded.update({name: points})
-        file = open('record.json', 'w')
-        new_file = json.dumps(json_loaded)
-        file.write(new_file)
+        json_loaded.update({name: points}) # adiciona as pontuações da nova rodada
+        file = open('record.json', 'w') # abre o arquivo novamente
+        new_file = json.dumps(json_loaded) # coloca os dados na variavel
+        file.write(new_file)    #escreve no arquivo
         file.close()
 
 
